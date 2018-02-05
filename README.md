@@ -1,6 +1,6 @@
 # GLEW - Fork of The OpenGL Extension Wrangler Library
 
-On forking this repo found the auto-generation of headers and source seemed could not be done in Windows, and perhpas noted below, so cloned my fork into Ubuntu linux, and did the **generation** there, then added the `generated` files to the **next** branch, the default `here`, was then able to build the `static` and `shared/DLL` libraries, using MSVC 14 2015 in 64-bits.
+On forking this repo found the auto-generation of headers and source seemed could not be done in Windows, which is noted below, so cloned my fork into Ubuntu linux, and did the **generation** there, then added the `generated` files to the **next** branch, the default `here`, was then able to build the `static` and `shared/DLL` libraries, using MSVC 14 2015 in 64-bits.
 
 Maybe still some problems, like it seems the **static** library is called **libglew32.lib**, and of course the Debug **libglew32d.lib**, while the suggested, maybe too simple, `FindGLEW.cmake` has a name list which includes `glew32s` and `glew32sd`. Now maybe the cmake find library function knows to **add** a `lib` prefix when searching, not sure...
 
