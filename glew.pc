@@ -1,11 +1,11 @@
-prefix=/home/geoff/projects/glew-fork/out
+prefix=X:/3rdParty.x64
 exec_prefix=${prefix}
-libdir=/home/geoff/projects/glew-fork/out/lib
+libdir=X:/3rdParty.x64/lib
 includedir=${prefix}/include
 
 Name: glew
 Description: The OpenGL Extension Wrangler library
 Version: 2.1.0
 Cflags: -I${includedir} 
-Libs: -L${libdir} -lGLEW
+Libs: -L${libdir} -lglew32
 Requires: glu
