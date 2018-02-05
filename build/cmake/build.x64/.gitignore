@@ -1,0 +1,12 @@
+*.vcxproj
+*.filters
+CMakeCache.txt
+CMakeFiles/*
+bin/*
+bldlog-1.txt
+cmake_install.cmake
+cmake_uninstall.cmake
+*.dir/*
+*.sln
+lib/*
+x64/*
