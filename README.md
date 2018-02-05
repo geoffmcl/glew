@@ -1,3 +1,25 @@
+# GLEW - Fork of The OpenGL Extension Wrangler Library
+
+On forking this repo found the auto-generation of headers and source seemed could not be done in Windows, and perhpas noted below, so cloned my fork into Ubuntu linux, and did the **generation** there, then added the `generated` files to the **next** branch, the default `here`, was then able to build the `static` and `shared/DLL` libraries, using MSVC 14 2015 in 64-bits.
+
+Maybe still some problems, like it seems the **static** library is called **libglew32.lib**, and of course the Debug **libglew32d.lib**, while the suggested, maybe too simple, `FindGLEW.cmake` has a name list which includes `glew32s` and `glew32sd`. Now maybe the cmake find library function knows to **add** a `lib` prefix when searching, not sure...
+
+But given this project uses the cmake generator, this **next** branch build should work for all versions of MSVC, and should get around to deleting the folders `vc10`, `vc12`, `vc14`, `vc15`, `vc6` since with cmake these are no longer required.
+
+Have add a `build\cmake\build.x64` folder with a convenient `build-me.bat` which should only require minimum changes to build, but even without it you can used a simple -
+
+```
+Open a MSVC command prompt with the version to be used... optional
+cd build\cmake\build.x64
+cmake .. [options] -DCMAKE_INSTALL_PREFIX=X:\3rdParty.x64 - or as desired
+cmake --build . --config Release
+cmake --build . --config Release --target INSTALL - optional
+```
+
+Anyway, this seems a good start to a Windows/MSVC build... and muchly thank the `GLEW` maintainers for their efforts...
+
+The original README.md contents is maintained unchanged below
+
 # GLEW - The OpenGL Extension Wrangler Library
 
 The OpenGL Extension Wrangler Library (GLEW) is a cross-platform open-source C/C++ extension loading library. GLEW provides efficient run-time mechanisms for determining which OpenGL extensions are supported on the target platform. OpenGL core and extension functionality is exposed in a single header file. GLEW has been tested on a variety of operating systems, including Windows, Linux, Mac OS X, FreeBSD, Irix, and Solaris.
