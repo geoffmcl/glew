@@ -10,3 +10,9 @@ cmake_uninstall.cmake
 *.sln
 lib/*
 x64/*
+.vs/*
+*.VC.db
+glewinfo.txt
+visualinfo.txt
+temp*
+
